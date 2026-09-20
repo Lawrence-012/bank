@@ -1,0 +1,425 @@
+/* =========================================
+   1. GLOBAL & FONTS
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-deep-blue: #374b8f;
+    --border-gray: #cbd5e1;
+    --text-navy: #1a2238;
+}
+
+* {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Fading Blue Gradient Background for Landing Page */
+body.landing-body {
+    background: linear-gradient(180deg, #ffffff 15%, #dbeafe 100%) !important;
+    color: #475569;
+    min-height: 100vh;
+}
+
+@media (min-width: 992px) {
+    body.landing-body.overflow-hidden-lg {
+        overflow: hidden !important;
+    }
+}
+
+/* =========================================
+   2. NAVBAR & NAVIGATION (LANDING PAGE)
+========================================= */
+.brand-logo {
+    max-height: 38px;
+    width: auto;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    color: #64748b !important;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--primary-deep-blue) !important;
+    font-weight: 700;
+}
+
+/* =========================================
+   3. HERO SECTION & TYPOGRAPHY
+========================================= */
+.text-navy {
+    color: var(--primary-deep-blue) !important;
+}
+
+.text-primary-custom {
+    color: #3b82f6 !important;
+}
+
+.bg-primary-custom {
+    background-color: #3b82f6 !important;
+}
+
+.hero-title {
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.lead {
+    color: #64748b !important;
+}
+
+.hero-card-img {
+    transform: rotate(20deg);
+    filter: drop-shadow(0px 18px 25px rgba(37, 99, 235, 0.25));
+    transition: transform 0.4s ease;
+}
+
+.hero-card-img:hover {
+    transform: rotate(16deg) scale(1.02);
+}
+
+/* =========================================
+   4. BUTTONS & UI ELEMENTS (SOFT ROUNDED)
+========================================= */
+.btn-primary-custom {
+    background-color: var(--primary-deep-blue) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #2b3b72 !important;
+    box-shadow: 0 4px 12px rgba(55, 75, 143, 0.3);
+}
+
+.btn-outline-custom {
+    border: 1px solid #cbd5e1 !important;
+    color: #475569 !important;
+    background-color: #ffffff !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: #f1f5f9 !important;
+    color: var(--primary-deep-blue) !important;
+}
+
+.btn-outline-transparent {
+    border: none !important;
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+    font-weight: 500;
+    border-radius: 12px !important;
+}
+
+.btn-outline-transparent:hover {
+    background-color: #e2e8f0 !important;
+    color: var(--primary-deep-blue) !important;
+}
+
+/* =========================================
+   5. FEATURES FOOTER & MODALS (ROUNDED CORNERS)
+========================================= */
+.feature-box {
+    text-align: center;
+}
+
+.feature-box i {
+    color: #3b82f6 !important;
+}
+
+.fs-7 {
+    font-size: 0.75rem !important;
+}
+
+@media (min-width: 768px) {
+    .border-end-md {
+        border-right: 1px solid rgba(203, 213, 225, 0.6);
+    }
+}
+
+.modal-content {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    border: none !important;
+}
+
+.modal-header {
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+}
+
+.modal-footer {
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+}
+
+.bg-navy {
+    background-color: var(--primary-deep-blue) !important;
+}
+
+/* =========================================
+   6. SIGN UP & LOGIN FORM MODAL STYLING
+========================================= */
+.style-landbank-modal {
+    background: #ffffff;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+}
+
+.card-landbank {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px !important;
+}
+
+.custom-input {
+    border: 1px solid #3b82f6 !important;
+    border-radius: 10px !important;
+    padding: 0.45rem 0.75rem !important;
+    font-size: 0.825rem !important;
+    color: #1e293b !important;
+}
+
+.custom-input::placeholder {
+    color: #94a3b8 !important;
+    font-size: 0.78rem;
+}
+
+.custom-input:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15) !important;
+}
+
+.terms-box {
+    border: 1px solid #3b82f6 !important;
+    border-radius: 10px !important;
+}
+
+.btn-navy-landbank {
+    background-color: #1a2b6d !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease;
+}
+
+.btn-navy-landbank:hover {
+    background-color: #111d4a !important;
+    box-shadow: 0 4px 10px rgba(26, 43, 109, 0.25);
+}
+
+.tracking-wide {
+    letter-spacing: 0.04em;
+}
+
+/* =========================================
+   7. PERFECT FIT DASHBOARD (ZERO DEAD SPACE)
+========================================= */
+html, body.dashboard-body {
+    height: 100% !important;
+    max-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #e2edff !important;
+    font-family: 'Poppins', sans-serif !important;
+    overflow: hidden !important;
+}
+
+.dashboard-wrapper {
+    height: 100vh;
+    max-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.card {
+    border-radius: 18px !important;
+    overflow: hidden !important;
+}
+
+.dashboard-sidebar {
+    width: 220px;
+    min-width: 220px;
+    height: 100%;
+    background-color: #2b3b72 !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+}
+
+.brand-icon-bg {
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+}
+
+.dashboard-sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px !important;
+    transition: all 0.3s ease;
+}
+
+.dashboard-sidebar .nav-link:hover,
+.dashboard-sidebar .nav-link.active {
+    background-color: #ffffff !important;
+    color: #2b3b72 !important;
+}
+
+.border-white-10 {
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.hover-white:hover {
+    color: #ffffff !important;
+}
+
+.shadow-xs {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.bg-indigo-subtle {
+    background-color: #e0e7ff !important;
+    border-radius: 10px !important;
+}
+.text-indigo {
+    color: #4338ca !important;
+}
+
+.bg-blue-subtle {
+    background-color: #dbeafe !important;
+    border-radius: 10px !important;
+}
+.text-blue {
+    color: #1d4ed8 !important;
+}
+
+.bg-primary-subtle { 
+    background-color: #e0f2fe !important; 
+    border-radius: 10px !important;
+}
+.bg-success-subtle { 
+    background-color: #dcfce7 !important; 
+    border-radius: 10px !important;
+}
+.bg-info-subtle { 
+    background-color: #e0e7ff !important; 
+    border-radius: 10px !important;
+}
+.bg-warning-subtle { 
+    background-color: #fef3c7 !important; 
+    border-radius: 10px !important;
+}
+
+.card-icon-box {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px !important;
+}
+
+.hover-bg-light {
+    border-radius: 10px !important;
+}
+
+.hover-bg-light:hover {
+    background-color: #f8fafc;
+}
+
+.min-vh-0 {
+    min-height: 0 !important;
+}
+
+/* Custom scrollbars inside modal containers */
+.overflow-auto::-webkit-scrollbar {
+    width: 4px;
+}
+.overflow-auto::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+/* =========================================
+   8. TOP-RIGHT TOAST NOTIFICATION STYLING
+========================================= */
+.toast-container {
+    pointer-events: none;
+}
+
+.toast {
+    pointer-events: auto;
+    min-width: 280px;
+    max-width: 360px;
+    animation: toastSlideIn 0.35s ease forwards;
+}
+
+@keyframes toastSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =========================================
+   9. EMPLOYEE WORKSTATION TABLE STYLING
+========================================= */
+.table-responsive {
+    border-bottom-left-radius: 18px !important;
+    border-bottom-right-radius: 18px !important;
+    overflow: hidden !important;
+}
+
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px !important;
+}
+
+.custom-emp-table thead th {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #e2e8f0;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.custom-emp-table tbody td {
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.search-box .form-control {
+    border-radius: 10px !important;
+}
+
+.search-box .form-control:focus {
+    box-shadow: none;
+    border-color: #cbd5e1;
+}
+
+.avatar-sm {
+    background-color: #eff6ff;
+    color: #3b82f6;
+}
+
+@media (max-width: 991.98px) {
+    .dashboard-sidebar {
+        display: none !important;
+    }
+}
